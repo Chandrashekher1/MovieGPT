@@ -7,7 +7,7 @@ const VideoBackground = () => {
   const addNowPlayingMovies = useSelector((store) => store.movies)
   // console.log(trailerVideo);
   const movieId = addNowPlayingMovies.nowPlayingMovies[0]?.id
-  console.log(trailerVideo?.key);
+  // console.log(trailerVideo?.key);
   
   useMovieTrailer(movieId); 
 
