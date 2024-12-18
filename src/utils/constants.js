@@ -11,7 +11,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: "Bearer " +process.env.TMBD_KEY
+      Authorization: "Bearer " +process.env.REACT_APP_TMBD_KEY
     }
   };
   
@@ -20,4 +20,4 @@ export const API_OPTIONS = {
   export const SUPPORTED_LANGUAGE = [{identifier: "en", name : "English"},
     {identifier: "hindi", name : "Hindi"},
   ]
-export const OpenAi_key =process.env.GOOGLE_API_KEY;
+export const OpenAi_key =process.env.REACT_APP_GOOGLE_API_KEY;
