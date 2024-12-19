@@ -94,7 +94,7 @@ const GptSearchBar = () => {
           type="text"
           ref={searchText}
           placeholder={lang[langKey]?.gptPlaceholder || 'Search movies...'}
-          className="p-4 m-4 col-span-9 focus:outline-none"
+          className=" md:p-4 m-4 col-span-9 focus:outline-none"
         />
         <button
           className={`py-2 px-4 m-4 ${isLoading ? 'bg-gray-500' : 'bg-red-700'} rounded-lg col-span-3 font-semibold`}
