@@ -86,7 +86,7 @@ const Header = () => {
             />
             {user && (
                 <div className='justify-between flex p-2'>
-                    { showGptSearch &&<select className='p-4 bg-gray-900 text-white m-4 rounded-lg cursor-pointer focus:outline-none active:scale-100' onChange={handleLanguageChange} onClick={(e) => e.stopPropagation()}>
+                    { showGptSearch &&<select className='p-4 bg-gray-900 text-white m-4 hidden rounded-lg cursor-pointer focus:outline-none active:scale-100 md:inline-block' onChange={handleLanguageChange} onClick={(e) => e.stopPropagation()}>
                         {SUPPORTED_LANGUAGE.map((lang) => (
                             <option key={lang.identifier} value={lang.identifier}>
                                 {lang.name}
@@ -97,7 +97,7 @@ const Header = () => {
                     
                     <button className='bg-purple-800 text-white md:mx-4 p-2 my-4 rounded-lg hover:opacity-80 active:scale-95 ' onClick={handleGptToggle}>{!showGptSearch ? "GPT Search": "HomePage"}</button>
                     <img className='hidden md:inline-block w-12 h-12 m-4 rounded-lg' src="https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e" alt="User Icon" />
-                    <button className='bg-gray-400 px-4 py-1 mx-4 my-4 hidden rounded-lg md:inline-block font-bold text-white ' onClick={handleSignOut}>
+                    <button className='bg-gray-400 px-4 py-1 mx-4 my-4 rounded-lg md:inline-block font-bold text-white ' onClick={handleSignOut}>
                         Sign out
                     </button>
                     

@@ -20,7 +20,7 @@ const Body = () => {
    ])
 
     return (
-        <div>
+        <div className="overflow-hidden">
            <RouterProvider router = {appRouter}/>
         </div>
     )
