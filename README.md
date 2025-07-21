@@ -1,10 +1,10 @@
 # 🎬 MovieGPT
 
-MovieGPT is a sleek, modern **Netflix clone** built with a powerful movie recommendation system. Users can browse top-rated, popular, and upcoming movies, and even get AI-powered suggestions based on their mood or preferences using **Gemini API**.
+MovieGPT is an AI-powered web application that helps users get intelligent suggestions and summaries about any movie they search for. With a clean and user-friendly interface, the app allows users to explore movie insights, suggestions, and overviews — all powered by Google's **Gemini API**.
 
 <br/>
 
-## 🚀 Features
+##  Features
 
 -  **User Authentication**
   - Secure login and sign-up using **Firebase Authentication**
