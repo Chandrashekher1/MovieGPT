@@ -16,10 +16,7 @@ const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch()
     const user = useSelector((store) => store.user);
-
     const  showGptSearch = useSelector((store) => store.gpt.showGptSearch)
-
-
     const handleGptToggle = (e) => {
         e.stopPropagation()
         dispatch(toggleGptSeacrh())
@@ -31,9 +28,7 @@ const Header = () => {
 
     const handleLanguageChange = (e) => {
        dispatch(changeLanguage(e.target.value))
-        
     }
-
     const handleSignOut = () => {
         signOut(auth)
             .then(() => {
@@ -45,8 +40,6 @@ const Header = () => {
                 navigate("/error");
             });
     };
-
-
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -71,15 +64,13 @@ const Header = () => {
         return () => unsubscribe();
       }, []);
     
-   
-
     return (
         <div 
-            className='absolute w-screen z-10 py-0 px-8 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between'
+            className='absolute w-screen z-10 py-4 md:py-0 md:px-6 bg-gradient-to-b from-black flex  md:flex-row justify-between'
             onClick={handleRender}
         >
             <img 
-                className='w-32 h-24 mx-auto md:mx-0 cursor-pointer'
+                className='md:w-32 md:h-24 w-16 h-12 md:mx-0 cursor-pointer mx-6'
                 src={LOGO} 
                 onClick={() => {navigate("/")}}
                 alt="Netflix Logo" 
@@ -95,14 +86,11 @@ const Header = () => {
                     </select>
                 }
                     
-                    <button className='bg-purple-800 text-white md:mx-4 p-2 my-4 rounded-lg hover:opacity-80 active:scale-95 ' onClick={handleGptToggle}>{!showGptSearch ? "GPT Search": "HomePage"}</button>
+                    <button className='bg-purple-800 text-white md:mx-4 md:p-2 py-1 px-2 md:my-4 rounded-md hover:opacity-80 active:scale-95 ' onClick={handleGptToggle}>{!showGptSearch ? "GPT Search": "HomePage"}</button>
                     <img className='hidden md:inline-block w-12 h-12 m-4 rounded-lg' src="https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e" alt="User Icon" />
-                    <button className='bg-gray-400 px-4 py-1 mx-4 my-4 rounded-lg md:inline-block font-bold text-white ' onClick={handleSignOut}>
+                    <button className='bg-gray-400 md:px-4 px-2 py-1 mx-2 md:my-4 rounded-lg md:inline-block font-semibold text-white ' onClick={handleSignOut}>
                         Sign out
                     </button>
-                    
-                    
-                    
                 </div> 
             )}
         </div>
