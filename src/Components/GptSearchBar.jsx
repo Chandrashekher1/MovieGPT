@@ -47,12 +47,9 @@ const GptSearchBar = () => {
     const gptQuery = `Act as a movie recommendation system and suggest some movies for the query: "${query}". Provide 10 movie names, comma-separated.`;
     
       // Initialize GoogleGenerativeAI
-
-      console.log("SI",  OpenAi_key);
-      
     const genAI = new GoogleGenerativeAI(OpenAi_key);
   
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });  
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });  
     const result = await model.generateContent( gptQuery );
     
     // Parse the GPT response
